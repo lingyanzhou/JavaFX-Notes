@@ -77,6 +77,9 @@ public class HelloWorldApp extends Application {
 Application.launch(MainApp.class, args)
 ```
 
+###Preparing Scene Graph
+Preparing 
+
 ###Preparing Scene
 * Creat a scene with a scene graph. 
 >```
@@ -100,3 +103,5 @@ primaryStage.setScene(scene);
 >```
 primaryStage.show();
 ```
+
+###Preparing Scene Graph
