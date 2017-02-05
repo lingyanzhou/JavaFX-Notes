@@ -11,7 +11,7 @@ import lzhou.javafx.sudoku.controller.StagesController;
 import lzhou.javafx.sudoku.view.AppView;
 
 
-public class MainApp extends Application {
+public class HelloWorldApp extends Application {
     @Override
         public void stop() throws Exception {
     }
@@ -35,7 +35,7 @@ public class MainApp extends Application {
      */
     /*
     public static void main(String[] args) {
-        Application.launch(MainApp.class, args);
+        Application.launch(HelloWorldApp.class, args);
     }
     */
 
