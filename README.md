@@ -86,13 +86,13 @@ Application.launch(MainApp.class, args)
 ###Preparing Scene Graph
 * Create a root node and adding nodes in the constructor
 >```
-Group root = new Group(node...)
+Group root = new Group(Node...)
 ```
 * Retrieve an observerable list and add nodes to the list.
 >```
 ObservableList<Node> list = root.getChildren();
-list.addAll(node...);
-list.add(node);
+list.addAll(Node...);
+list.add(Node);
 ```
 
 ###Preparing Scene
@@ -119,4 +119,5 @@ primaryStage.setScene(scene);
 primaryStage.show();
 ```
 
-###Preparing Scene Graph
+###Terminating the Application
+* Implicit termination: Closing all windows terminate a JFX application. `Platform.setImplicitExit(boolean)`
