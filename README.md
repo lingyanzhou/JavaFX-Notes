@@ -37,9 +37,11 @@ public class HelloWorldApp extends Application {
 	*/
 	/*
 	public static void main(String[] args) {
-	Application.launch(HelloWorldApp.class, args);
+		Application.launch(HelloWorldApp.class, args);
 	}
 	*/
 	}
 }
 ```
+
+All JFX application must extend `javafx.application.Application`. Java can run JFX applications in three mode, as applets, Webstart applications, or standalone applications. 
