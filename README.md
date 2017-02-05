@@ -18,7 +18,7 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        TextArea ta = new TextArea(paramStr);
+        TextArea ta = new TextArea("Hello World");
         Group root = new Group(ta);
         stage.setScene(new Scene(root));
         stage.setTitle("Hello World");
