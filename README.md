@@ -91,6 +91,7 @@ Group root = new Group(node...)
 >```
 ObservableList<Node> list = root.getChildren();
 list.addAll(node...);
+list.add(node);
 ```
 
 ###Preparing Scene
