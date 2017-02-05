@@ -2,6 +2,7 @@
 
 ##Hello World application
 
+
 ```java
 import javafx.application.Application;
 import javafx.scene.Parent;
@@ -18,7 +19,7 @@ public class HelloWorldApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        TextArea ta = new TextArea("Hello World");
+        Label nameLbl = new Label("Hello World")
         Group root = new Group(ta);
         stage.setScene(new Scene(root));
         stage.setTitle("Hello World");
