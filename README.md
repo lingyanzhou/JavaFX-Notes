@@ -51,7 +51,7 @@ public class HelloWorldApp extends Application {
   1. An instance of the application class is created.  
   2. `init()` is called.
   3. `start()` is called.
-  4. The application keeps runnign.
+  4. The application keeps running.
   5. `stop()` is called.
 * `start(Stage stage)` is the entry point. The argument `stage` is the primary stage created by the runtime.
 *  
