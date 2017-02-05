@@ -78,8 +78,14 @@ Application.launch(MainApp.class, args)
 ```
 
 ###Preparing Scene
-
-
+* Creat a scene with a scene graph. 
+>```
+Scene scene = new Scene(parent);
+```
+* Set background fill. 
+>```
+scene.setFill(paint);
+```
 
 ###Preparing Stage
 * Setting the title to Stage. 
