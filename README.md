@@ -78,7 +78,16 @@ Application.launch(MainApp.class, args)
 ```
 
 ###Preparing Scene Graph
-Preparing 
+* Create a root node and adding nodes in the constructor
+>```
+Group root = new Group(node...)
+```
+* Retrieve an observerable list and add nodes to the list.
+>```
+ObserverableList list = root.getChildren();
+list.add(node);
+list.addAll(node...);
+```
 
 ###Preparing Scene
 * Creat a scene with a scene graph. 
