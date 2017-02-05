@@ -32,12 +32,17 @@ public class HelloWorldApp extends Application {
 
 	@Override
 	public void start(Stage stage) throws Exception {
-	Label helloLbl = new Label("Hello World");
-	Group root = new Group();
-	root.getChildren().add(helloLbl);
-	stage.setScene(new Scene(root));
-	stage.setTitle("Hello World");
-	stage.show();
+		Label helloLbl = new Label("Hello World");
+		Button quitBtn = new Button("Quit");
+		VBox root = new VBox();
+		root.getChildren().add(helloLbl);
+		root.getChildren().add(quitBtn);
+		
+		quitBtn.setOnAction(e->Platform.exit());
+		
+		stage.setScene(new Scene(root));
+		stage.setTitle("Hello World");
+		stage.show();
 	}
 
 	@Override
