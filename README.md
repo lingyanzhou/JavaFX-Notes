@@ -13,24 +13,22 @@ import lzhou.javafx.sudoku.view.AppView;
 
 public class MainApp extends Application {
     @Override
-	public void stop() throws Exception {
-		// TODO Auto-generated method stub
-    	container.shutdown();
-		super.stop();
-	}
-
-	@Override
-    public void start(Stage stage) throws Exception {
-		Weld weld = new Weld();
-		container = weld.initialize();
-		container.instance().select(AppStarter.class).get().init(stage);;
-		
+        public void stop() throws Exception {
     }
 
     @Override
-	public void init() throws Exception {
-		super.init();
-	}
+    public void start(Stage stage) throws Exception {
+        TextArea ta = new TextArea(paramStr);
+        Group root = new Group(ta);
+        stage.setScene(new Scene(root));
+        stage.setTitle("Application Parameters");
+        stage.show();
+    }
+
+    @Override
+    public void init() throws Exception {
+        super.init();
+    }
 
     /**
      * Java can automatically call launch on JFX application.
