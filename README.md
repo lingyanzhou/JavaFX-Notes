@@ -35,8 +35,9 @@ public class HelloWorldApp extends Application {
 		Label helloLbl = new Label("Hello World");
 		Button quitBtn = new Button("Quit");
 		VBox root = new VBox();
-		root.getChildren().add(helloLbl);
-		root.getChildren().add(quitBtn);
+		ObservableList<Node> list = root.getChildren();
+		list.add(helloLbl);
+		list.add(quitBtn);
 		
 		quitBtn.setOnAction(e->Platform.exit());
 		
