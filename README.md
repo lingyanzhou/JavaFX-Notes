@@ -1,5 +1,18 @@
 # JavaFX 8 Notes
 
+##JavaFX Components
+* Basic components: **Stage**, **Scene**
+, **Nodes**.
+* A **Stage** is the top level container (a window for standalone applications). It contains one scene.
+* A **Scene** is a container of all content in a scene graph. 
+* **Nodes** are vitual objects. **Node** is the base class. **Parent** is the parent of all nodes with children. There are 3 types of nodes.
+  * **Group** contains a list of nodes.
+  * **Region** is the base of all JFX UI control and containers.
+    * *Chart*
+    * *Pane*
+    * *Control*
+  * **WebView** 
+
 ##Hello World application
 
 
@@ -54,11 +67,11 @@ public class HelloWorldApp extends Application {
   4. The application keeps running.
   5. `stop()` is called.
 * `start(Stage stage)` is the entry point. The argument `stage` is the primary stage created by the runtime.
-*  
 
 ###Launching the application
 
-* Java can run JFX applications in three mode, 1. as applets, 2. Webstart applications, or 3. standalone applications.
+* Java can run JFX applications in three mode, 1. as **applets**, 2. **Webstart** applications, or 3. **standalone** applications.
 * `main()` is not required to run JavaFX application. JavaFX runtime can automatically start the application class. 
 * If `main()` is provided, it can call static function `Application.launch()` to launch the appliction.
+
 
