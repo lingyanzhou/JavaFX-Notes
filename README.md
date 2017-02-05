@@ -47,6 +47,7 @@ public class HelloWorldApp extends Application {
 ###Extending `Application` class
 
 * All JFX application must extend `javafx.application.Application`. 
+* `start(Stage stage)` is the entry point. The argument `stage` is the primary stage created by the runtime.
 * 
 
 ###Launching the application
