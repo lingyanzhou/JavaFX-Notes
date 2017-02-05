@@ -71,7 +71,7 @@ public class HelloWorldApp extends Application {
   2. `init()` is called.
   3. `start()` is called.
   4. The application keeps running.
-  5. `stop()` is called.
+  5. When the application terminates, `stop()` is called.
 * `start(Stage stage)` is the entry point. The argument `stage` is the primary stage created by the runtime.
 
 ###Launching the application
@@ -120,4 +120,8 @@ primaryStage.show();
 ```
 
 ###Terminating the Application
-* Implicit termination: Closing all windows terminate a JFX application. `Platform.setImplicitExit(boolean)`
+* Implicit termination: Closing all windows terminate a JFX application. 
+* Explicit termination: call `Platform.exit()`.
+* By default, implicit termination is turned on. The option can be triggered by `Platform.setImplicitExit(boolean)`.
+
+
