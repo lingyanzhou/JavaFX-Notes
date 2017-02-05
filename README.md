@@ -94,4 +94,3 @@ primaryStage.setScene(scene);
 >```
 primaryStage.show();
 ```
-
