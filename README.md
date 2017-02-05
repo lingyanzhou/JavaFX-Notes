@@ -5,40 +5,41 @@
 
 ```java
 import javafx.application.Application;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import lzhou.javafx.sudoku.controller.StagesController;
-import lzhou.javafx.sudoku.view.AppView;
 
 
 public class HelloWorldApp extends Application {
-    @Override
-        public void stop() throws Exception {
-    }
+	@Override
+	public void stop() throws Exception {
+	}
 
-    @Override
-    public void start(Stage stage) throws Exception {
-        Label nameLbl = new Label("Hello World")
-        Group root = new Group(ta);
-        stage.setScene(new Scene(root));
-        stage.setTitle("Hello World");
-        stage.show();
-    }
+	@Override
+	public void start(Stage stage) throws Exception {
+	Label helloLbl = new Label("Hello World");
+	Group root = new Group();
+	root.getChildren().add(helloLbl);
+	stage.setScene(new Scene(root));
+	stage.setTitle("Hello World");
+	stage.show();
+	}
 
-    @Override
-    public void init() throws Exception {
-        super.init();
-    }
+	@Override
+	public void init() throws Exception {
+		super.init();
+	}
 
-    /**
-     * Java can automatically call launch on JFX application.
-     */
-    /*
-    public static void main(String[] args) {
-        Application.launch(HelloWorldApp.class, args);
-    }
-    */
-
+	/**
+	* Java can automatically call launch on JFX application.
+	*/
+	/*
+	public static void main(String[] args) {
+	Application.launch(HelloWorldApp.class, args);
+	}
+	*/
+	}
 }
 ```
