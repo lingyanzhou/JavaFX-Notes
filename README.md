@@ -77,4 +77,23 @@ public class HelloWorldApp extends Application {
 Application.launch(MainApp.class, args)
 ```
 
+###Preparing Scene
+
+
+
+###Preparing Stage
+* Setting the title to Stage. 
+>```
+primaryStage.setTitle("Title"); 
+```
+       
+* Setting the scene to Stage 
+>```
+primaryStage.setScene(scene); 
+```
+       
+* Displaying the stage 
+>```
+primaryStage.show();
+```
 
