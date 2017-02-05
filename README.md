@@ -89,7 +89,7 @@ Group root = new Group(node...)
 ```
 * Retrieve an observerable list and add nodes to the list.
 >```
-ObserverableList<Node> list = root.getChildren();
+ObservableList<Node> list = root.getChildren();
 list.addAll(node...);
 ```
 
