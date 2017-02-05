@@ -21,7 +21,7 @@ public class MainApp extends Application {
         TextArea ta = new TextArea(paramStr);
         Group root = new Group(ta);
         stage.setScene(new Scene(root));
-        stage.setTitle("Application Parameters");
+        stage.setTitle("Hello World");
         stage.show();
     }
 
