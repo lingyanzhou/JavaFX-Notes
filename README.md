@@ -140,4 +140,12 @@ primaryStage.show();
   * `List<String> Parameter.getUnnamed()`
   * `List<String> Parameter.getRaw()`
   * `Map<String,String> Parameter.getNamed()`
-* 
+* Example:
+  ```
+  java MainApp arg1 arg2 --arg3=val
+  ```
+  ```
+  Unnamed: [arg1, arg2]
+  Named: {arg3=val}
+  Raw: [arg1, arg2, --arg3=val]
+  ```
