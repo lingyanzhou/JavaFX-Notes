@@ -210,6 +210,7 @@ public class ParametersApp extends Application {
         <fx:param name="arg3" value="val"/>
         <fx:argument>arg1</fx:argument>
         <fx:argument>arg2</fx:argument>
+        <fx:param name="arg3" value="val"/>
     </jfx:javafx-desc>
 </jnlp>
 ```
