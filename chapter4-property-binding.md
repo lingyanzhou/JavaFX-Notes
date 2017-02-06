@@ -128,4 +128,15 @@ idWrapper.set(101);
 //For external use
 ReadOnlyIntegerProperty id = idWrapper.getReadOnlyProperty();
 ```
+* Properties fire invalidation events and value change events. Invalidation events are for lazy binding. Value change events are for eager binding.
+
+### Invalidation Events
+* All properties are subclass of `Observable`. They will fire invalidation events when their values are invalidated. 
+* `InvalidationListener` can be attached to or detached from an `Observable` through `addListener(InvalidationListener)` or `removeListener(InvalidationListener)`.
+* An invalidation event fires only when a valid property become invalid.
+
+### Change Events
+* All properties are subclass of `ObservableValue`. They will fire change events when their values are changed. 
+* `ChangeListener.change()` callback receives three argument, the source `ObservableValue`, the old value and the new value. 
+* `ChangeListener` can be attached to or detached from an `Observable` through `addListener(ChangeListener)` or `removeListener(ChangeListener)`.
 * 
