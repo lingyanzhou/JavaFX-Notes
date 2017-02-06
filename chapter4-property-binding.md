@@ -5,6 +5,7 @@
 * A bean uses `PropertyChangeSupport.addPropertyChangeListener(listener)` to register listners. 
 * When a property is changed, the method fires an event by `PropertyChangeSupport.firePropertyChange(name, old, new)`.
 * The listener is notified through `PropertyChangeListener.propertyChange(evt)`
+* The 
 
 ```java
 import java.beans.PropertyChangeListener;
@@ -64,7 +65,6 @@ public class SimpleBean {
 A driver test case:
 ```java
 import static org.junit.Assert.*;
-import java.beans.PropertyChangeEvent;
 import org.junit.Test;
 
 public class SimpleBeanTest {
