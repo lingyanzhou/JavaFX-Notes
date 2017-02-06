@@ -1,5 +1,6 @@
 # JavaFX 8 Notes
 
+
 ##JavaFX Components
 * Basic components: **Stage**, **Scene**
 , **Nodes**.
@@ -214,4 +215,6 @@ public class ParametersApp extends Application {
     </jfx:javafx-desc>
 </jnlp>
 ```
+
+
 
