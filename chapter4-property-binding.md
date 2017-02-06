@@ -109,6 +109,5 @@ public class Book {
     public String setTitle(String t) {
         return title.set(t);
     }
-
 }
 ```
