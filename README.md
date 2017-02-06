@@ -73,6 +73,8 @@ public class HelloWorldApp extends Application {
   4. The application keeps running.
   5. When the application terminates, `stop()` is called.
 * `start(Stage stage)` is the entry point. The argument `stage` is the primary stage created by the runtime.
+* `init()` runs in the JavaFX launcher thread. `start()` runs in the JavaFX application thread.
+* Scenes and stages can be created only in the JavaFX application thread. Therefore, `init()` can be used to prepare UI components, but cannot create scenes and stages.
 
 ###Launching the application
 
@@ -124,4 +126,17 @@ primaryStage.show();
 * Explicit termination: call `Platform.exit()`.
 * By default, implicit termination is turned on. The option can be triggered by `Platform.setImplicitExit(boolean)`.
 
-
+##Passing Parameters to a JavaFX Application
+* There are two ways to pass arguments to JFX applications:
+  * command-line arguments for standalone applications
+  * JNLP file for applets and WebStart applications
+* Parameters are available in and after `init()` method, but is not available in the application constructor.
+* Three types of parameters:
+  * Unnamed
+  * Named
+  * Raw
+* Named parameters in commandline is in the form `--key=name`.
+* `Parameter` object is retrived by calling `Application.getParameters()`. The tree types of parameters are accessed by:
+  * `List<String> Parameter.getUnnamed()`
+  * `List<String> Parameter.getRaw()`
+  * `Map<String,String> Parameter.getNamed()`
