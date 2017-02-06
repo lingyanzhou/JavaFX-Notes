@@ -5,7 +5,7 @@
 * To support binding, a bean contains a `PropertyChangeSupport` object, and uses `PropertyChangeSupport.addPropertyChangeListener(listener)` to register listeners. 
 * When a property is changed, the setter should fire an event by `PropertyChangeSupport.firePropertyChange(name, old, new)`.
 * The listener is notified through `PropertyChangeListener.propertyChange(evt)`
-* `PropertyChangeEvent` contains the name of the property, the old value, and the new value.
+* `PropertyChangeEvent` wraps the name of the property, the old value, and the new value.
 
 ```java
 import java.beans.PropertyChangeListener;
@@ -74,6 +74,7 @@ public class SimpleBeanTest {
 		SimpleBean bean = new SimpleBean("old", 0);
 		bean.addPropertyChangeListener("name", 
 			e->{
+				// An event object wraps property name, old value, and new value.
 				assertEquals("name", e.getPropertyName());
 				assertEquals("old", (String)e.getOldValue());
 				assertEquals("new", (String)e.getNewValue());
@@ -89,3 +90,4 @@ public class SimpleBeanTest {
 	}
 }
 ```
+
