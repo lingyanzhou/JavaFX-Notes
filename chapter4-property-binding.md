@@ -1,6 +1,11 @@
 #Property Binding
 
 ##Binding in JavaBeans
+* JavaBean binding is supported by `PropertyChangeListener` and `PropertyChangeSupport` class. 
+* A bean uses `PropertyChangeSupport.addPropertyChangeListener(listener)` to register listners. 
+* When a property is changed, the method fires an event by `PropertyChangeSupport.firePropertyChange(name, old, new)`.
+* The listener is notified through `PropertyChangeListener.propertyChange(evt)`
+
 ```java
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
@@ -55,6 +60,8 @@ public class SimpleBean {
 	}
 }
 ```
+
+A driver test case:
 ```java
 import static org.junit.Assert.*;
 import java.beans.PropertyChangeEvent;
