@@ -62,7 +62,7 @@ public class SimpleBean {
 }
 ```
 
-A driver progran:
+A driver program:
 ```java
 import static org.junit.Assert.*;
 import org.junit.Test;
