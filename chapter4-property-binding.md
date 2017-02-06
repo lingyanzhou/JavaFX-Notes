@@ -117,6 +117,8 @@ public class Book {
 * Example:
 ```java
 ReadOnlyIntegerWrapper idWrapper = new ReadOnlyIntegerWrapper(100);
+//Call setter
+idWrapper.set(101);
 //For external use
 ReadOnlyIntegerProperty id = idWrapper.getReadOnlyProperty();
 ```
