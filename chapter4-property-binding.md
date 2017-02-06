@@ -112,11 +112,11 @@ public class Book {
 }
 ```
 * Read-only properties are named as `ReadOnlyXXXProperty`. 
-* `ReadOnlyXXXWrapper` wraps two properties, one read-only, one read/write. Typically, the wrapper properties are used so that a bean can change its value internally and only exposes a read-only version for external use. 
+* `ReadOnlyXXXWrapper` wraps two properties, one read-only, one read/write. The read-only property can be accessed through `ReadOnlyXXXWrapper.getReadOnlyProperty()`. 
+* Typically, the wrapper properties are used so that a bean can change its value internally and only exposes a read-only version for external use. 
 * Example:
 ```java
-
 ReadOnlyIntegerWrapper idWrapper = new ReadOnlyIntegerWrapper(100);
+//For external use
 ReadOnlyIntegerProperty id = idWrapper.getReadOnlyProperty();
-
 ```
