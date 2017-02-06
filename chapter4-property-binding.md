@@ -97,8 +97,14 @@ public class SimpleBeanTest {
 ## JavaFX Properties
 
 * Properties are observable objects wrapping around a Java primitive type or object. The base classes are named `XXXProperty`, eg, `StringProperty`, `IntegerProperty`, DoubleProperty`. 
+* A property have 3 attributes: a reference to the bean object, a name, a value. They can be set in the constructors and accessed through `getName()`, `getValue()`, `getBean()`.
+* Example:
+```java
+String name = p.getName();
+Object value = p.getValue();
+Object bean = p.getBean();
+```
 * The wrapped value can be changed or accessed by `set()` and `get()` for primitive types or `setValue()` and `getValue()` for boxed type or objects. 
-* A property have 3 attributes: a reference to the bean object, a name, a value.
 * Example:
 ```java
 public class Book {
@@ -122,3 +128,4 @@ idWrapper.set(101);
 //For external use
 ReadOnlyIntegerProperty id = idWrapper.getReadOnlyProperty();
 ```
+* 
