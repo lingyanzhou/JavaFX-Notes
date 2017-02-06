@@ -1,4 +1,4 @@
-##Passing Parameters to a JavaFX Application
+#Passing Parameters to a JavaFX Application
 
 ```java
 import javafx.application.Application;
@@ -86,6 +86,3 @@ public class ParametersApp extends Application {
     </jfx:javafx-desc>
 </jnlp>
 ```
-
-
-
