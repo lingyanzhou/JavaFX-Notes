@@ -97,12 +97,18 @@ public class SimpleBeanTest {
 ## JavaFX Properties
 
 * Properties are observable objects wrapping around a Java type or class.
-* The wrapped value can be changed or accessed by `set()` and `get()` method. Example:
->```java
+* The wrapped value can be changed or accessed by `set()` and `get()` method.
+* 
+* Example:
+```java
 public class Book {
     private StringProperty title = new SimpleStringProperty(this, "title", "Unknown");
-    public final StringProperty titleProperty() {
-        return title;
+    public String getTitle() {
+        return title.get();
     }
+    public String setTitle(String t) {
+        return title.set(t);
+    }
+
 }
 ```
