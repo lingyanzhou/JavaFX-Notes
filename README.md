@@ -194,7 +194,7 @@ public class ParametersApp extends Application {
   * `List<String> Parameter.getUnnamed()`
   * `List<String> Parameter.getRaw()`
   * `Map<String,String> Parameter.getNamed()`
-* Example
+* Commandline Example
   >```
   java MainApp arg1 arg2 --arg3=val
   >
