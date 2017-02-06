@@ -28,3 +28,10 @@ _book/
 book.pdf
 book.epub
 book.mobi
+
+# IDE or mvn generated files
+**/target/
+**/*.swp
+**/.classpath
+**/.project
+**/.settings/
