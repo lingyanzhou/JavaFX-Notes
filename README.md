@@ -202,4 +202,16 @@ public class ParametersApp extends Application {
   Named: {arg3=val}
   Raw: [arg1, arg2, --arg3=val]
   ```
+* JNLP Example:
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="FX_NetBeans_Only.jnlp">
+...
+    <jfx:javafx-desc>
+        <fx:param name="width" value="200"/>
+        <fx:param name="height" value="100"/>        <fx:argument>Anna</fx:argument>
+        <fx:argument>Lola</fx:argument>
+    </jfx:javafx-desc>
+</jnlp>
+```
 
