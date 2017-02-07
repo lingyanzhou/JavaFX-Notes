@@ -71,6 +71,7 @@ double y = rect.getMinY() + (rect.getHeight()-stage.getHeight())/2.0;
 stage.setX(x);
 stage.setY(y);
 ```
+### Style of a Stage
 
 * `initStyle()`  changes the style of a stage before showing the stage. Type of stages:
     * StageStyle.DECORATED
@@ -127,3 +128,10 @@ public class UndecoratedApp extends Application {
     }
 }
 ```
+
+### Modality of a Stage
+* `initModality(Modality m)` sets the window's modality. Three types of modality:
+    * NONE
+    * WINDOW_MODAL
+    * APPLICATION_MODEL
+
