@@ -180,6 +180,7 @@ z.unbind();
 ###Bidirectional and Unidirectional binding
 
 ####Unidirectional `bind()`
+
 * One property can have one binding only. Rebinding a property that already has a unidirectional binding unbinds the previous binding.
 ```java
 z.bind(x.add(y))
@@ -193,6 +194,35 @@ z.bind(x.add(y))
 //Exception. Must call z.unbind(); first.
 z.set(10)
 ```
-*  
 
 ####Bidirectional `bindBidirectional()`
+
+* Bidirectional binding can only be created
+between properties of the same type.
+
+* Bind and unbind through `bindBidirectional(property)` and `unbindBidirectional(property)`.
+
+* Multiple bidirectional bindings can be added to the same property. Example
+```java
+//x=y
+//x=z
+x.bindBidirectional(y);
+x.bindBidirectional(z);
+```
+
+* The order of bidirectional bindings affect the results. For a chain of bidiretional bindings, the left-hand-side property of the last binding will be the value contained in all properties.  
+    * Example: the folloing bindings keeps all values same as `z`.
+```java
+//x=y
+//x=z
+x.bindBidirectional(y);
+x.bindBidirectional(z);
+```
+   
+    * Example: the folloing bindings keeps all three values same as `y`.
+```java
+//x=z
+//z=y
+x.bindBidirectional(z);
+z.bindBidirectional(y);
+```
