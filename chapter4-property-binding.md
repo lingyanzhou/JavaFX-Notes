@@ -131,12 +131,36 @@ ReadOnlyIntegerProperty id = idWrapper.getReadOnlyProperty();
 * Properties fire invalidation events and value change events. Invalidation events are for lazy binding. Value change events are for eager binding.
 
 ### Invalidation Events
+
 * All properties are subclass of `Observable`. They will fire invalidation events when their values are invalidated. 
 * `InvalidationListener` can be attached to or detached from an `Observable` through `addListener(InvalidationListener)` or `removeListener(InvalidationListener)`.
 * An invalidation event fires only when a valid property become invalid.
 
 ### Change Events
+
 * All properties are subclass of `ObservableValue`. They will fire change events when their values are changed. 
 * `ChangeListener.change()` callback receives three argument, the source `ObservableValue`, the old value and the new value. 
 * `ChangeListener` can be attached to or detached from an `Observable` through `addListener(ChangeListener)` or `removeListener(ChangeListener)`.
-* 
+
+### Avoiding Memory Leaks in Listeners
+* If listeners are not removed through `removeListener()` when they are no longer needed, the application will consume unnecessary memory.
+* Use `WeakInvalidationListener` and
+`WeakChangeListener` to wrap a listerner instance. When all strong reference of the instance is gone, the wrapped instance and the weak listener wrapper are garbage collected, and the weak listener will not fire.
+
+## Binding in JavaFX 
+* Binding in JavaFX is an expression object that evaluates to a value. 
+* The binding observes the changes of its dependencies, and the result is updated automatically.
+* JavaFX uses lazy binding. When any dependency is invalidaded, the binding is invalidaded. When getter is called, the expression is recomputed and revalidated.
+* Example:
+```java
+IntegerProperty x = new SimpleIntegerProperty(100);
+IntegerProperty y = new SimpleIntegerProperty(200);
+//Sum is bound to x+y
+NumberBinding sum = x.add(y);
+//val == 300
+int val = sum.intValue();
+x.set(200);
+//val == 400
+val = sum.intValue();
+```
+
