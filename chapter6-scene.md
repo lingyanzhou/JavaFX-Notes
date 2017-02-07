@@ -44,6 +44,8 @@ else {
 
 * Focus owner is a read-only property. It can be changed programmatically through `requestFocus`.
 
+## `Platform` Class
+
 * `Platform` contains JavaFX platform related functionality. 
     * exit()
     * isImplicitExit()
@@ -51,3 +53,5 @@ else {
     * isFxApplicationThread()
     * isSupported(ConditionalFeature feature)
     * runLater(Runnable runnable)
+    
+* ``
