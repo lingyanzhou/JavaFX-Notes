@@ -145,6 +145,70 @@ stage.setOpacity(0.5);
 
 * `setResizable(boolean)` sets wether the user can resize the window. The `setMinWidth()`, `setMinHeight()`, `setMaxWidth()`, and `setMaxHeight()` methods set the range the stage can be resized. `setWidth(double)` and `setHeight(double)` set the size programmatically.
 
+* `setFullScreen(boolean)` toggles the full-screen mode of a stage. `isFullScreen()` checks if a stage is in full-screen mode. 
+
+### Showing Multiple Stages
+
+* `show` methods shows a stage and returns immediately. 
+
+* `showAndWait` methods shows a stage and blocks until the new stage is closed. The old event loop is blocked, and a nested event loop is started for the new stage.
+
+* The `showAndWait()` method must be called on the JavaFX Application Thread. It should not be called
+on the primary stage or a runtime exception will be thrown. 
+
+Example. A confirmation dialog.
+```java
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
 
 
-* 
+public class MainApp extends Application {
+	boolean canQuit = false;
+    @Override
+    public void start(Stage stage) throws Exception {
+    	Button btnQuit = new Button("Quit");
+    	
+    	btnQuit.setOnAction(
+    		e->{
+    			ConfirmationDialog dialog = new ConfirmationDialog();
+    			dialog.showAndWait();
+    			if (dialog.getResult()) {
+    				stage.close();
+    			}
+    	});
+        HBox root = new HBox(btnQuit);
+        
+        Scene scene = new Scene(root);
+        
+        stage.setTitle("Show and Wait Dialog");
+        stage.setScene(scene);
+        stage.show();
+    }
+}
+
+class ConfirmationDialog {
+	private boolean ok=false;
+	private Stage stage = null;
+	
+	public ConfirmationDialog() {
+		stage = new Stage();
+		Button btnOk = new Button("Ok");
+		Button btnCancle = new Button("Cancle");
+		btnOk.setOnAction(e1->{ok=true; stage.close();});
+		btnCancle.setOnAction(e1->{ok=false; stage.close();});
+		HBox root = new HBox(btnOk, btnCancle);
+		stage.setScene(new Scene(root));
+	}
+	
+	public void showAndWait() {
+		stage.showAndWait();
+	}
+	
+	public boolean getResult() {
+		return ok;
+	}
+}
+```
