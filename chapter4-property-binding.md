@@ -202,7 +202,7 @@ between properties of the same type.
 
 * Bind and unbind through `bindBidirectional(property)` and `unbindBidirectional(property)`.
 
-* Multiple bidirectional bindings can be added to the same property. Example
+* Multiple bidirectional bindings can be added to the same property. Adding a bidirectional binding will not remove previous bindings. Example
 ```java
 //x=y
 //x=z
