@@ -143,7 +143,7 @@ public class UndecoratedApp extends Application {
 stage.setOpacity(0.5);
 ```
 
-* `setResizable(boolean)` sets wether the user can resize the window. The `setMinWidth()`, `setMinHeight()`, `setMaxWidth()`, and `setMaxHeight()` methods set the range the stage can be resized. `setWidth(double)` and `setHeight(double)` set the size programatically.
+* `setResizable(boolean)` sets wether the user can resize the window. The `setMinWidth()`, `setMinHeight()`, `setMaxWidth()`, and `setMaxHeight()` methods set the range the stage can be resized. `setWidth(double)` and `setHeight(double)` set the size programmatically.
 
 
 
