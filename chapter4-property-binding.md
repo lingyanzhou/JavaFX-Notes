@@ -227,3 +227,17 @@ x.bindBidirectional(z);
 x.bindBidirectional(z);
 z.bindBidirectional(y);
 ```
+
+## Building Bindings
+
+### High-level API
+
+#### Expression Classes
+
+#### When, Then, Otherwise
+
+#### `Bindings` Utility Class
+
+###Low-level API
+* Define a custom `Binding` class:
+   * 
