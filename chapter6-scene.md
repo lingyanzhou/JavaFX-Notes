@@ -66,3 +66,16 @@ String getCodeBase()
     * JSObject getWebContext()
     * String resolveURI(String base, String relativeURI)
     * void showDocument(String uri)
+
+* If the application runs in a webpage, `getWebContext()` return a `JSObject` object that interact with the
+JavaScript objects in a web browser. In standalone application, it returns `null`.
+
+* `JSObject.eval()` can run javascript. 
+Example.
+```java
+HostServices host = getHostServices();
+JSObject js = host.getWebContext();
+if (js != null) {
+    js.eval("window.alert('This is a JavaScript alert!')");
+}
+```
