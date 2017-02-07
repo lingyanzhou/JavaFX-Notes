@@ -54,4 +54,15 @@ else {
     * isSupported(ConditionalFeature feature)
     * runLater(Runnable runnable)
     
-* ``
+* `runLater` runs an runnable in the *JavaFX application thread*. It is used to run a task that is created on some thread but needs to be run on the JavaFX application thread.
+
+## Host Environment
+
+* `HostService` instance has information of the host environment. It is retrieved from `Application.getHostServices()`.
+
+* `HostService` methods:
+String getCodeBase()
+    * String getDocumentBase()
+    * JSObject getWebContext()
+    * String resolveURI(String base, String relativeURI)
+    * void showDocument(String uri)
