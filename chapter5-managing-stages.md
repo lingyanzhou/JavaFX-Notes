@@ -71,3 +71,10 @@ double y = rect.getMinY() + (rect.getHeight()-stage.getHeight())/2.0;
 stage.setX(x);
 stage.setY(y);
 ```
+
+* Type of stages:
+    * StageStyle.DECORATED
+    * StageStyle.UNDECORATED
+    * StageStyle.TRANSPARENT
+    * StageStyle.UNIFIED
+    * StageStyle.UTILITY
