@@ -204,6 +204,7 @@ class ConfirmationDialog {
 	}
 	
 	public void showAndWait() {
+	        //block the calling event loop.
 		stage.showAndWait();
 	}
 	
