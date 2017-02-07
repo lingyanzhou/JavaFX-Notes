@@ -5,5 +5,5 @@
 * [Hello World Application](chapter2-hello-world-application.md)
 * [Passing Parameters to JFX Applications](chapter3-passing-parameters-to-jfx-applications.md)
 * [Property Binding](chapter4-property-binding.md)
-* [Managing Stages](managing-stages.md)
+* [Managing Stages](chapter5-managing-stages.md)
 
