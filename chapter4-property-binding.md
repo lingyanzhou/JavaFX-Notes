@@ -190,7 +190,7 @@ z.bind(a.add(b))
 * Chaning the bound property without first calling `unbind()` causes an exception.
 ```java
 z.bind(x.add(y))
-//Exception
+//Exception. Must call z.unbind(); first.
 z.set(10)
 ```
 *  
