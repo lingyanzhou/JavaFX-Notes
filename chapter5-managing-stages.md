@@ -45,12 +45,26 @@ stage.setScene(scene);
 stage.show();
 ```
 
-* Automatically synchronize stage size with scene size
+* Get stage size through `getWidth()` and `getHeight()`
+```java
+stage.getWidth();
+stage.getHeight();
+```
+
+* Automatically synchronize stage size with scene size through `sizeToScene()`
 ```java
 stage.sizeToScene();
 ```
 
-* Center the stage on the screen
+* Center the stage on the screen though `centerOnScreen()`
 ```java
-stage.centerOnScreen()();
+stage.centerOnScreen();
+```
+
+* Setting the location of the top-left corner of the stage through `setX()` and `setY()`. Example of centering a stage manually:
+```java
+//Stage must be shown first
+stage.show();
+Rectangle2D rect = Screen.getPrimary().getVisualBounds();
+double x = rect.getMinX() + (rect.getWidth()-stage.getWidth())/2.0;
 ```
