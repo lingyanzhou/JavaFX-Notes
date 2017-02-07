@@ -45,3 +45,12 @@ stage.setScene(scene);
 stage.show();
 ```
 
+* Automatically synchronize stage size with scene size
+```java
+stage.sizeToScene();
+```
+
+* Center the stage on the screen
+```java
+stage.centerOnScreen()();
+```
