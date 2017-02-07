@@ -229,14 +229,19 @@ z.bindBidirectional(y);
 ```
 
 ## Building Bindings
+a
 
 ### High-level API
+a
 
 #### Expression Classes
+a
 
 #### When, Then, Otherwise
+a
 
 #### `Bindings` Utility Class
+a
 
 ###Low-level API
 * Define a custom `Binding` class:
