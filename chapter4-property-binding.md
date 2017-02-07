@@ -235,7 +235,13 @@ Two ways to create bindings: 1) Fluent APIs prodived by `Expression` classes, an
 ### High-level API
 
 #### Expression Classes
-* `When` class
+* `StringExpression`: `concate`...
+
+* `NumberExpression`: `add`, `minus`, `multiple`, `devide`, `asString`
+
+* `BooleanExpression`: `and`, `or`
+
+* `Object`: `and`, `or`
 
 #### Conditional Binding
 * `When` class: 
@@ -246,6 +252,10 @@ new When(condition).then(value1).otherwise(value2)
 * `condition` must be a `BooleanBinding`, `value1` and `value2` must have the same type.
 
 #### `Bindings` Utility Class
+
+[Bindings API](https://docs.oracle.com/javase/8/javafx/api/javafx/beans/binding/Bindings.html)
+
+
 * `equal`, `notEqual`,  , ...
 
 * Numbers: `add(op1, op2)`, `multiple`, `minus`, `devide`, `greaterThan`, `greaterThan`, `negate`...
@@ -257,10 +267,6 @@ new When(condition).then(value1).otherwise(value2)
 * Boolean: `not`, `or` ...
 
 * Object: `isNull`, `isNotNull`...
-
-
-
-[Bindings API](https://docs.oracle.com/javase/8/javafx/api/javafx/beans/binding/Bindings.html)
 
 ###Low-level API
 * Define a custom `Binding` class:
