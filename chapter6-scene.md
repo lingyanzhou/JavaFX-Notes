@@ -49,6 +49,5 @@ else {
     * isImplicitExit()
     * setImplicitExit(boolean)
     * isFxApplicationThread()
-    * isImplicitExit()
     * isSupported(ConditionalFeature feature)
     * runLater(Runnable runnable)
