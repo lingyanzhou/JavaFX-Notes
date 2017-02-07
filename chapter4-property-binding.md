@@ -229,19 +229,24 @@ z.bindBidirectional(y);
 ```
 
 ## Building Bindings
-a
+
+Two ways to create bindings: 1) Fluent APIs prodived by `Expression` classes, and utility classes; 2) custom `Binding` classes.
 
 ### High-level API
-a
 
 #### Expression Classes
-a
+* `When` class
 
-#### When, Then, Otherwise
-a
+#### Conditional Binding
+* `When` class: 
+```java
+new When(condition).then(value1).otherwise(value2)
+```
+
+* `condition` must be a `BooleanBinding`, `value1` and `value2` must have the same type.
 
 #### `Bindings` Utility Class
-a
+[](https://docs.oracle.com/javase/8/javafx/api/javafx/beans/binding/Bindings.html "Bindings")
 
 ###Low-level API
 * Define a custom `Binding` class:
