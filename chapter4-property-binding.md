@@ -235,6 +235,7 @@ Two ways to create bindings: 1) Fluent APIs prodived by `Expression` classes, an
 ### High-level API
 
 #### Expression Classes
+
 * `StringExpression`: `concate`...
 
 * `NumberExpression`: `add`, `minus`, `multiple`, `devide`, `asString`
