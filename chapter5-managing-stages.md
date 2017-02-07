@@ -34,7 +34,7 @@ double dpi = screen.getDpi();
 ```
 
 ## Stages
-* A stage in JavaFX is a top-level container that hosts a scene. The primary stage is created by the platform and passed to the start(Stage s) method of the Application class. You can create additional
+* A stage in JavaFX is a top-level container that hosts a scene. The primary stage is created by the platform and passed to the `start(Stage s)` method of the Application class. You can create additional
 stages as needed.
 
 * 
