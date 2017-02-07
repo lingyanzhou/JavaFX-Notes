@@ -164,12 +164,12 @@ x.set(200);
 //val == 400
 val = sum.intValue();
 ```
-* Binding can be done on `XXXProperty` objects. Example:
+* Binding and unbinding can be done on `XXXProperty` objects through `bind(expression)` and `unbind()`. Example:
 ```java
 IntegerProperty x = new SimpleIntegerProperty(100);
 IntegerProperty y = new SimpleIntegerProperty(200);
 IntegerProperty z = new SimpleIntegerProperty(200);
-z.bind(x.add(y))
+z.bind(x.add(y));
+z.unbind();
 ```
-
 
