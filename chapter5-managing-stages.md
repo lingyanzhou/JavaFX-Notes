@@ -24,8 +24,8 @@ screen.getMaxY();
 
 * Get the screen **bounds** (the drawable area) and **visual bounds** (the drawable area except the areas used by the native windowing system such as a menu bar):
 ```java
-Rectangle2D b = screen.getBounds();
-Rectangle2D vb = screen.getVisualBounds();
+Rectangle2D bRect = screen.getBounds();
+Rectangle2D vbRect = screen.getVisualBounds();
 ```
 
 * Get window DPI:
