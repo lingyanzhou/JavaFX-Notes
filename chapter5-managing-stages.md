@@ -71,9 +71,8 @@ double y = rect.getMinY() + (rect.getHeight()-stage.getHeight())/2.0;
 stage.setX(x);
 stage.setY(y);
 ```
-### Style of a Stage
 
-* `initStyle()`  changes the style of a stage before showing the stage. Type of stages:
+* `initStyle()`  changes the **style** of a stage before showing the stage. Type of stages:
     * StageStyle.DECORATED
     * StageStyle.UNDECORATED
     * StageStyle.TRANSPARENT
@@ -129,12 +128,17 @@ public class UndecoratedApp extends Application {
 }
 ```
 
-### Modality of a Stage
-* `initModality(Modality m)` sets the window's modality. Three types of modality:
+* `initModality(Modality m)` sets the window's **modality**. Three types of modality:
     * NONE
     * WINDOW_MODAL
     * APPLICATION_MODEL
 
+
 * The modality of a stage must be set before it is shown. Setting the modality of a stage after it has been shown throws a runtime exception. Setting the modality for the primary stage also throws a runtime exception.
 
 * Window modality blocks all other windows in the same hierarchy. Application modality blocks all other windows int the same application.
+
+* `setOpacity(double)` sets the opacity of the stage. 0.0 means the stage is full translucent; 1.0 means the stage is opaque.
+```java
+stage.setOpacity(0.5);
+```
