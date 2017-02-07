@@ -246,7 +246,7 @@ new When(condition).then(value1).otherwise(value2)
 * `condition` must be a `BooleanBinding`, `value1` and `value2` must have the same type.
 
 #### `Bindings` Utility Class
-[](https://docs.oracle.com/javase/8/javafx/api/javafx/beans/binding/Bindings.html "Bindings")
+[Bindings](https://docs.oracle.com/javase/8/javafx/api/javafx/beans/binding/Bindings.html "Bindings")
 
 ###Low-level API
 * Define a custom `Binding` class:
