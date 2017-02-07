@@ -190,7 +190,111 @@ public class MainApp extends Application {
 }
 
 class ConfirmationDialog {
+	private boolean ok=false;import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+
+
+public class MainApp extends Application {
+	boolean canQuit = false;
+    @Override
+    public void start(Stage stage) throws Exception {
+    	Button btnQuit = new Button("Quit");
+    	
+    	btnQuit.setOnAction(
+    		e->{
+    			ConfirmationDialog dialog = new ConfirmationDialog();
+    			dialog.showAndWait();
+    			if (dialog.getResult()) {
+    				stage.close();
+    			}
+    	});
+        HBox root = new HBox(btnQuit);
+        
+        Scene scene = new Scene(root);
+        
+        stage.setTitle("Show and Wait Dialog");
+        stage.setScene(scene);
+        stage.show();
+    }
+}
+
+class ConfirmationDialog {
 	private boolean ok=false;
+	private Stage stage = null;
+	
+	public ConfirmationDialog() {
+		stage = new Stage();
+		Button btnOk = new Button("Ok");
+		Button btnCancle = new Button("Cancle");
+		btnOk.setOnAction(e1->{ok=true; stage.close();});
+		btnCancle.setOnAction(e1->{ok=false; stage.close();});
+		HBox root = new HBox(btnOk, btnCancle);
+		stage.setScene(new Scene(root));
+	}
+	
+	public void showAndWait() {
+		stage.showAndWait();
+	}
+	
+	public boolean getResult() {
+		return ok;
+	}
+}import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+
+
+public class MainApp extends Application {
+	boolean canQuit = false;
+    @Override
+    public void start(Stage stage) throws Exception {
+    	Button btnQuit = new Button("Quit");
+    	
+    	btnQuit.setOnAction(
+    		e->{
+    			ConfirmationDialog dialog = new ConfirmationDialog();
+    			dialog.showAndWait();
+    			if (dialog.getResult()) {
+    				stage.close();
+    			}
+    	});
+        HBox root = new HBox(btnQuit);
+        
+        Scene scene = new Scene(root);
+        
+        stage.setTitle("Show and Wait Dialog");
+        stage.setScene(scene);
+        stage.show();
+    }
+}
+
+class ConfirmationDialog {
+	private boolean ok=false;
+	private Stage stage = null;
+	
+	public ConfirmationDialog() {
+		stage = new Stage();
+		Button btnOk = new Button("Ok");
+		Button btnCancle = new Button("Cancle");
+		btnOk.setOnAction(e1->{ok=true; stage.close();});
+		btnCancle.setOnAction(e1->{ok=false; stage.close();});
+		HBox root = new HBox(btnOk, btnCancle);
+		stage.setScene(new Scene(root));
+	}
+	
+	public void showAndWait() {
+		stage.showAndWait();
+	}
+	
+	public boolean getResult() {
+		return ok;
+	}
+}
 	private Stage stage = null;
 	
 	public ConfirmationDialog() {
