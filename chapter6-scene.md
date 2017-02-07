@@ -4,4 +4,25 @@
 
 * A stage can have one scene. A scene can be attached to only one stage. Reattaching a scene to another stage detaches it from the previous stage.
 
-* 
+* Commonly used properties:
+    * cursor
+    * fill
+    * focusOwner
+    * height
+    * root
+    * width
+    * height
+    * x
+    * y
+
+* `setCursor` method sets the cursor style of the scene. 
+Example. Set standard cursor with static fields in `Cursor` class.
+```java
+scene.setCursor(Cursor.WAIT);
+```
+Example. Set custom cursor.
+```java
+URL url = getClass().getClassLoader().getResource("mycur.png");
+Cursor myCur = Cursor.cursor(url.toExternalForm());
+scene.setCursor(myCur);
+```
