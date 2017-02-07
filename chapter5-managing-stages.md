@@ -32,3 +32,9 @@ Rectangle2D vbRect = screen.getVisualBounds();
 ```java
 double dpi = screen.getDpi();
 ```
+
+## Stages
+* The primary stage is created by
+the platform and passed to the start(Stage s) method of the Application class. You can create additional
+stages as needed.
+*
