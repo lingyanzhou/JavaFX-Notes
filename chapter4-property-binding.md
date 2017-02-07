@@ -246,9 +246,17 @@ new When(condition).then(value1).otherwise(value2)
 * `condition` must be a `BooleanBinding`, `value1` and `value2` must have the same type.
 
 #### `Bindings` Utility Class
+* `equal`, `notEqual`,  , ...
 
-* `add(op1, op2)`, `multiple`, `minus`, `devide` ...
-* `equal`, `notEqual`,  `equalIgnoreCase`, `notEqualIgnoreCase`, 'greaterThan'
+* Numbers: `add(op1, op2)`, `multiple`, `minus`, `devide`, `greaterThan`, `greaterThan`, `negate`...
+
+* List or map: `size`, `isEmpty`, `integerValueAt(observableList, index)` ...
+
+* String: `length()`, `format`, `equalIgnoreCase`, `notEqualIgnoreCase`
+
+* Boolean: `not`, `or` ...
+
+* Object: `notNull`, `null`...
 
 
 
