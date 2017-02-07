@@ -72,7 +72,7 @@ stage.setX(x);
 stage.setY(y);
 ```
 
-* Change the style of a stage through `initStyle()`. Type of stages:
+* Change the style of a stage through `initStyle()` before showing the stage. Type of stages:
     * StageStyle.DECORATED
     * StageStyle.UNDECORATED
     * StageStyle.TRANSPARENT
