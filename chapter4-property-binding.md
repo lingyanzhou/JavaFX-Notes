@@ -180,10 +180,10 @@ z.unbind();
 ###Bidirectional and Unidirectional binding
 
 ####Unidirectional `bind()`
-* One property can have one binding only. Rebinding a property that already has a unidirectional binding unbinds the previous binding..
+* One property can have one binding only. Rebinding a property that already has a unidirectional binding unbinds the previous binding.
 ```java
 z.bind(x.add(y))
-//Automatically 
+//Automatically unbind the previous binding
 z.bind(a.add(b))
 ```
 
