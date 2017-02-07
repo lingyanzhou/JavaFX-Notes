@@ -135,3 +135,4 @@ public class UndecoratedApp extends Application {
     * WINDOW_MODAL
     * APPLICATION_MODEL
 
+* The modality of a stage must be set before it is shown. Setting the modality of a stage after it has been shown throws a runtime exception. Setting the modality for the primary stage also throws a runtime exception.
