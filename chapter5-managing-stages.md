@@ -37,4 +37,11 @@ double dpi = screen.getDpi();
 * A stage in JavaFX is a top-level container that hosts a scene. The primary stage is created by the platform and passed to the `start(Stage s)` method of the Application class. You can create additional
 stages as needed.
 
-* 
+* Show and hide a stage through `show()` and `hide()`.
+```java
+stage.setTitle("Stage with an Empty Scene");
+Scene scene = new Scene(new Group());
+stage.setScene(scene);
+stage.show();
+```
+
