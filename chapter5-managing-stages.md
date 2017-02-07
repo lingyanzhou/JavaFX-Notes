@@ -67,4 +67,7 @@ stage.centerOnScreen();
 stage.show();
 Rectangle2D rect = Screen.getPrimary().getVisualBounds();
 double x = rect.getMinX() + (rect.getWidth()-stage.getWidth())/2.0;
+double y = rect.getMinY() + (rect.getHeight()-stage.getHeight())/2.0;
+stage.setX(x);
+stage.setY(y);
 ```
