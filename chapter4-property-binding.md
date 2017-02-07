@@ -359,3 +359,4 @@ class StringToIntBinding extends IntegerBinding {
 	}
 }
 ```
+
