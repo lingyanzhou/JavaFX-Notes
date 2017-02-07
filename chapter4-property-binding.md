@@ -149,8 +149,11 @@ ReadOnlyIntegerProperty id = idWrapper.getReadOnlyProperty();
 
 ## Binding in JavaFX 
 * Binding in JavaFX is an expression object that evaluates to a value. 
+
 * The binding observes the changes of its dependencies, and the result is updated automatically.
+
 * JavaFX uses lazy binding. When any dependency is invalidaded, the binding is invalidaded. When getter is called, the expression is recomputed and revalidated.
+
 * Binding can be done on `XXXBinding` objects. Example:
 ```java
 IntegerProperty x = new SimpleIntegerProperty(100);
@@ -164,6 +167,7 @@ x.set(200);
 //val == 400
 val = sum.intValue();
 ```
+
 * Binding and unbinding can be done on `XXXProperty` objects through `bind(expression)` and `unbind()`. Example:
 ```java
 IntegerProperty x = new SimpleIntegerProperty(100);
@@ -173,3 +177,22 @@ z.bind(x.add(y));
 z.unbind();
 ```
 
+###Bidirectional and Unidirectional binding
+
+####Unidirectional `bind()`
+* One property can have one binding only. Adding another binding without unbinding the current one causes an exception.
+```java
+z.bind(x.add(y))
+//Exception
+z.bind(a.add(b))
+```
+
+* Chaning the bound property without first calling `unbind()` causes an exception.
+```java
+z.bind(x.add(y))
+//Exception
+z.set(10)
+```
+*  
+
+####Bidirectional `bindBidirectional()`
