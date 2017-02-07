@@ -210,7 +210,8 @@ x.bindBidirectional(y);
 x.bindBidirectional(z);
 ```
 
-* The order of bidirectional bindings affect the results. For a chain of bidiretional bindings, the left-hand-side property of the last binding will be the value contained in all properties.  
+* The order of bidirectional bindings affect the results. For a chain of bidiretional bindings, the left-hand-side property of the last binding will be the value contained in all properties. 
+ 
     * Example: the folloing bindings keeps all values same as `z`.
 ```java
 //x=y
