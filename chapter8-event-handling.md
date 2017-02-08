@@ -156,11 +156,15 @@ the event does not travel to any parent node.
 
 |  method  | description |
 |----------|-------------|
-| boolean isAltDown() | |
-| boolean isShiftDown()| |
-| boolean isMetaDown()| |
-| boolean isControlDown()| |
-| boolean isShortcutDown() | if the platform-specific shortcut key is down |
+| `boolean isAltDown()` | |
+| `boolean isShiftDown()`| |
+| `boolean isMetaDown()`| |
+| `boolean isControlDown()`| |
+| `boolean isShortcutDown()` | if the platform-specific shortcut key is down |
+
+* `pickOnBounds` property controls whether a mouse event is picked in the geometric shape or in the bounding rectangle.
+
+* `mouseTransparent` property controls whether or not a node and its children receive mouse events.
 
 ## Key Events
 
