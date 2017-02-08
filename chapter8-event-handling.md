@@ -114,6 +114,9 @@ the event does not travel to any parent node.
 
 * Typical usage: If a parent node does not want its child nodes to respond to an event, it can consume the event in its event filter. If a parent node provides a default response to an event in an event handler, a child node can provide a specific response and consume the event.
 
+* At the consuming node, all filters/handlers of the right type are called. 
+
+* Consuming the event in event filters at the target node prevents the bubbling phase.
 
 
 
