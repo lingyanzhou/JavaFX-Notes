@@ -133,6 +133,25 @@ the event does not travel to any parent node.
 | `getSceneX()`, `getSceneY()`| relative to the scene |
 | `getScreen()`, `getScreenY()`| relative to the screen |
 
+* `MouseButton` enum
+   * `NONE`
+   * `PRIMARY`
+   * `MIDDLE `
+   * `SECONDARY `
+
+* `MouseButton getButton()` is used for `MOUSE_CLICKED`, `MOUSE_PRESSED` and `MOUSE_RELEASED` events.
+
+* For other mouse events such as `MOUSE_MOVED`, the following methods check mouse button states.
+
+|  method  | description |
+|----------|-------------|
+|int getClickCount() | It returns the number of mouse clicks associated with the mouse event.|
+|boolean isPrimaryButtonDown() | |
+|boolean isMiddleButtonDown() | |
+|boolean isSecondaryButtonDown() | |
+| boolean isPopupTrigger() | It returns true if the mouse event is the pop-up menu trigger event for the platform. |
+| boolean isStillSincePress() |  It returns true if the mouse cursor stays within a small area, which is known as the system-provided hysteresis area, between the last mouse-pressed event and the current mouse event. |
+
 ## Key Events
 
 * Types of key events:
