@@ -9,4 +9,5 @@
 * [Scene](chapter6-scene.md)
 * [Node](chapter7-node.md)
 * [Event Handling](chapter8-event-handling.md)
+* [Model-View-Controller Pattern](chapter11-model-view-controller-pattern.md)
 
