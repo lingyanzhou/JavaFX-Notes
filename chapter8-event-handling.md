@@ -66,15 +66,17 @@ consists of the container-children path starting at the stage to the event targe
 
 ### Capture Phase
 
-* The dispacher traverse nodes in container-child direction. 
+* The dispatcher traverse nodes in container-child direction. 
 
-* 
+* As the dispatcher passes through a node, the registered filters are called. The filter can stop the propagation by **consuming** the event.
 
 ### Bubbling Phase
 
-* The dispacher traverse nodes in child-container direction.
+* The dispatcher traverse nodes in child-container direction.
 
-* 
+* As the dispatcher passes through a node, the registered handlers are called. The filter can stop the propagation by consuming the event.
+
+
 
 
 
