@@ -148,7 +148,7 @@ the event does not travel to any parent node.
 |   Method    | Valid For | Description    |
 |-------------|-----------|----------------|
 |  `KeyCode getCode()`  |  `KEY_PRESSED`, `KEY_RELEASED` |  The KeyCode enum contains a constant to represent all keys in the keyboard. |
-|  `String getText()`  | `KEY\_PRESSED`, `KEY_RELEASED`  |  String description of the KyCode |
+|  `String getText()`  | `KEY_PRESSED`, `KEY_RELEASED`  |  String description of the KyCode |
 |  `String getCharacter()`  | `KEY_TYPED` |  UTF-8 character typed represented as String | 
 
 
