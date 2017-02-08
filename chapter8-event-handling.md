@@ -122,6 +122,8 @@ the event does not travel to any parent node.
 
 * Consuming the event in event filters at the target node prevents the bubbling phase.
 
+## Mouse Events
+
 ## Key Events
 
 * Types of key events:
@@ -145,6 +147,19 @@ the event does not travel to any parent node.
 
 |   Method    | Valid For | Description    |
 |-------------|-----------|----------------|
-|  KeyCode getCode()  |  KEY\_PRESSED, KEY_| 
-|  String getText()  |  | 
-|  String getCharacter()  |  | 
+|  `KeyCode getCode()`  |  `KEY_PRESSED`, `KEY_RELEASED` |  The KeyCode enum contains a constant to represent all keys in the keyboard. |
+|  `String getText()`  | `KEY\_PRESSED`, `KEY_RELEASED`  |  String description of the KyCode |
+|  `String getCharacter()`  | `KEY_TYPED` |  UTF-8 character typed represented as String | 
+
+
+* The `isAltDown()`, `isControlDown()`, `isMetaDown()`, `isShiftDown()`, and `isShortcutDown()` methods return modifier keys associated with the mouse event.
+
+## Window Events
+
+* Types:
+`ANY`
+`WINDOW_SHOWING`
+`WINDOW_SHOWN`
+`WINDOW_HIDING`
+`WINDOW_HIDDEN`
+`WINDOW_CLOSE_REQUEST`
