@@ -55,7 +55,16 @@
         * WindowEvent.WINDOW_HIDING
     * ActionEvent.ANY
 
+## Event Processing Mechanism
 
+* The default **event route** 
+consists of the container-children path starting at the stage to the event target node.
+
+* Two phase in event traversal:
+    * **Capture Phase**
+    * **Bubbling Phase**
+
+*
 
 
 
