@@ -157,9 +157,9 @@ the event does not travel to any parent node.
 ## Window Events
 
 * Types:
-`ANY`
-`WINDOW_SHOWING`
-`WINDOW_SHOWN`
-`WINDOW_HIDING`
-`WINDOW_HIDDEN`
-`WINDOW_CLOSE_REQUEST`
+    * `ANY`
+    * `WINDOW_SHOWING`
+    * `WINDOW_SHOWN`
+    * `WINDOW_HIDING`
+    * `WINDOW_HIDDEN`
+    * `WINDOW_CLOSE_REQUEST`
