@@ -64,7 +64,31 @@ consists of the container-children path starting at the stage to the event targe
     * **Capture Phase**
     * **Bubbling Phase**
 
-*
+### Capture Phase
+
+* The dispacher traverse nodes in container-child direction. 
+
+* 
+
+### Bubbling Phase
+
+* The dispacher traverse nodes in child-container direction.
+
+* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
