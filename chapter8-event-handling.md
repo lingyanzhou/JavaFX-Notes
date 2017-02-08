@@ -76,8 +76,17 @@ consists of the container-children path starting at the stage to the event targe
 
 * As the dispatcher passes through a node, the registered handlers are called. The filter can stop the propagation by consuming the event.
 
+## Registering Event Handlers
 
+* `EventHandler<Event>` class can be registered as event filters, event handlers, or both.
 
+* Registering event filters/handlers in two ways:
+    * Using the `addEventFilter()`, `addEventHandler()`, `removeEventFilter()`, and `removeEventHandler()` methods.
+    * Using `onXXXHandlers` properties.
+    
+* `addEventFilter()`, `addEventHandler()` can add multiple filters, handlers.
+
+* `setOnXXXHandlers` can only register one event handler. 
 
 
 
