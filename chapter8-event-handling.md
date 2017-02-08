@@ -85,6 +85,10 @@ consists of the container-children path starting at the stage to the event targe
     * Using `onXXXHandlers` properties.
     
 * `addEventFilter()`, `addEventHandler()` can add multiple filters, handlers.
+Example.
+```java
+node.addEventFilter(Event.ANY, handler);
+```
 
 * `setOnXXXHandlers` can only register one event handler. 
 
