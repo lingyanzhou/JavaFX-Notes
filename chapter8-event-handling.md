@@ -15,6 +15,8 @@
             * `KeyEvent`
             * `MouseEvent`
             * `TouchEvent`
+            *...
+
         * `WindowEvent`
         * `ActionEvent`
         
@@ -50,6 +52,7 @@
             * MouseEvent.MOUSE_PRESSED
             * MouseEvent.MOUSE_RELEASED
             * MouseEvent.MOUSE_CLICKED
+        *...
     * WindowEvent.ANY
         * WindowEvent.WINDOW_SHOWING
         * WindowEvent.WINDOW_HIDING
@@ -117,6 +120,7 @@ the event does not travel to any parent node.
 * At the consuming node, all filters/handlers of the right type are called. 
 
 * Consuming the event in event filters at the target node prevents the bubbling phase.
+
 
 
 
