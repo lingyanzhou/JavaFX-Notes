@@ -124,6 +124,15 @@ the event does not travel to any parent node.
 
 ## Mouse Events
 
+* Types: `ANY`, `MOUSE_DRAG`, `MOUSE_CLICKED` ...
+
+* Mouse location
+
+|  method | description |
+| `getX()`, `getY()` | the mouse location relative to the coordinate systems of the event source node |
+| `getSceneX()`, `getSceneY()`| relative to the scene |
+| `getScreen()`, `getScreenY()`| relative to the screen |
+
 ## Key Events
 
 * Types of key events:
@@ -163,3 +172,7 @@ the event does not travel to any parent node.
     * `WINDOW_HIDING`
     * `WINDOW_HIDDEN`
     * `WINDOW_CLOSE_REQUEST`
+
+* `WINDOW_CLOSE_REQUEST` events is fired in case of an external request to close the window. External close requests are close request generated from the external windowing system, include the Close icon on the window title bar. 
+
+* Programmatically close a window through `stage.close()` will not generate `WINDOW_CLOSE_REQUEST` events.
