@@ -35,6 +35,38 @@
 | getX()          | x coordinate of the mouse relative to the source of the event. |
 | getY()          | y coordinate of the mouse relative to the source of the event. |
 
+## Event Types
+
+* Event types are used to further differenciate different events.
+
+* Hierachy
+    * Event.ANY
+    * InputEvent.ANY
+        * KeyEvent.ANY
+            * KeyEvent.KEY_PRESSED
+            * KeyEvent.KEY_RELEASED
+            * KeyEvent.KEY_TYPED
+        * MouseEvent.ANY
+            * MouseEvent.MOUSE_PRESSED
+            * MouseEvent.MOUSE_RELEASED
+            * MouseEvent.MOUSE_CLICKED
+    * WindowEvent.ANY
+        * WindowEvent.WINDOW_SHOWING
+        * WindowEvent.WINDOW_HIDING
+    * ActionEvent.ANY
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
