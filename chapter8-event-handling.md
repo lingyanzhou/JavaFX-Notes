@@ -152,6 +152,16 @@ the event does not travel to any parent node.
 | boolean isPopupTrigger() | It returns true if the mouse event is the pop-up menu trigger event for the platform. |
 | boolean isStillSincePress() |  It returns true if the mouse cursor stays within a small area, which is known as the system-provided hysteresis area, between the last mouse-pressed event and the current mouse event. |
 
+* Modifier key states :
+
+|  method  | description |
+|----------|-------------|
+| boolean isAltDown() | |
+| boolean isShiftDown()| |
+| boolean isMetaDown()| |
+| boolean isControlDown()| |
+| boolean isShortcutDown() | if the platform-specific shortcut key is down |
+
 ## Key Events
 
 * Types of key events:
@@ -195,3 +205,4 @@ the event does not travel to any parent node.
 * `WINDOW_CLOSE_REQUEST` events is fired in case of an external request to close the window. External close requests are close request generated from the external windowing system, include the Close icon on the window title bar. 
 
 * Programmatically close a window through `stage.close()` will not generate `WINDOW_CLOSE_REQUEST` events.
+
