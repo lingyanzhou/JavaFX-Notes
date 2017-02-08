@@ -7,4 +7,6 @@
 * [Property Binding](chapter4-property-binding.md)
 * [Managing Stages](chapter5-managing-stages.md)
 * [Scene](chapter6-scene.md)
+* [Node](chapter7-node.md)
+* [Event Handling](chapter8-event-handling.md)
 
