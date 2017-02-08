@@ -81,7 +81,9 @@ consists of the container-children path starting at the stage to the event targe
 * `EventHandler<Event>` class can be registered as event filters, event handlers, or both.
 
 * Registering event filters/handlers in two ways:
+
     * Using the `addEventFilter()`, `addEventHandler()`, `removeEventFilter()`, and `removeEventHandler()` methods.
+    
     * Using `onXXXHandlers` properties.
     
 * `addEventFilter()`, `addEventHandler()` can add multiple filters, handlers.
@@ -90,8 +92,27 @@ Example.
 node.addEventFilter(Event.ANY, handler);
 ```
 
-* `setOnXXXHandlers` can only register one event handler. 
+* `setOnXXXHandlers` can only register one event handler. `setOnXXXHandlers(null)` unregisters it.
 
+## Execution Order
+
+* Filters are executed first. Handlers are executed last.
+
+* Filters/handlers of a specific type are called before filters/handlers of a more generic type.
+
+* Handlers registered with `addEventHandler()` are executed befre the handler registered with `setOnXXXHandler()`
+
+* The order of filters/handlers of the same type are undefined.
+
+##Consuming Events
+
+* An event is consumed by calling its `consume()` method.
+
+* If an event is consumed in an event filter
+of a node, the event does not travel to any child node. If an event is consumed in an event handler of a node,
+the event does not travel to any parent node.
+
+* Typical usage: If a parent node does not want its child nodes to respond to an event, it can consume the event in its event filter. If a parent node provides a default response to an event in an event handler, a child node can provide a specific response and consume the event.
 
 
 
