@@ -21,5 +21,6 @@
    * **Presenter**: Has presentation logic, reacts to user input from view, supervises model and view.
    
    * Presenters will keep references to views and models. Presenters add event listeners to views.
-   
-   * 
+
+![](/assets/nlBh0.png)
+
