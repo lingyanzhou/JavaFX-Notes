@@ -133,7 +133,9 @@ ReadOnlyIntegerProperty id = idWrapper.getReadOnlyProperty();
 ### Invalidation Events
 
 * All properties are subclass of `Observable`. They will fire invalidation events when their values are invalidated. 
+
 * `InvalidationListener` can be attached to or detached from an `Observable` through `addListener(InvalidationListener)` or `removeListener(InvalidationListener)`.
+
 * An invalidation event fires only when a valid property become invalid.
 
 ### Change Events
