@@ -1,4 +1,7 @@
-![](/assets/nlBh0.png)# Event Handling
+# Event Handling
+
+![](/assets/nlBh0.png)
+
 
 ## Related Classes & Interfaces
 

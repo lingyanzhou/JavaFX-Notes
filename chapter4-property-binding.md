@@ -142,6 +142,9 @@ ReadOnlyIntegerProperty id = idWrapper.getReadOnlyProperty();
 * `ChangeListener.change()` callback receives three argument, the source `ObservableValue`, the old value and the new value. 
 * `ChangeListener` can be attached to or detached from an `Observable` through `addListener(ChangeListener)` or `removeListener(ChangeListener)`.
 
+* Inside a listener, the property's value cannot be changed. The work arround is to call `Platform.runLater(runnable)`
+
+
 ### Avoiding Memory Leaks in Listeners
 * If listeners are not removed through `removeListener()` when they are no longer needed, the application will consume unnecessary memory.
 * Use `WeakInvalidationListener` and
