@@ -138,7 +138,7 @@ ReadOnlyIntegerProperty id = idWrapper.getReadOnlyProperty();
 
 * An invalidation event fires only when a valid property become invalid.
 
-* Typical usage: eagerly evaluate a JavaFX binding.
+* Typical usage: eagerly evaluate a JavaFX binding (when a binding is invalidated, validate it in the listener).
 
 ### Change Events
 
@@ -148,7 +148,7 @@ ReadOnlyIntegerProperty id = idWrapper.getReadOnlyProperty();
  
 * `ChangeListener` can be attached to or detached from an `Observable` through `addListener(ChangeListener)` or `removeListener(ChangeListener)`.
 
-* Typical usage: eager evaluation, input validation.
+* Typical usage: eager evaluation (when a binding's dependency is changed, recalculate the binding) , input validation.
 
 * Inside a listener, the property's value cannot be changed. The work arround is to call `Platform.runLater(runnable)`
 
